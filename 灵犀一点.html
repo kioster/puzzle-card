@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>灵犀一点</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+	<h1>灵犀一点</h1>
+	<form name="gameFrame" >
+	<div id="frame" style="width:672px;display:inline-block;">
+		<div id="start">
+		<input type="button" value="点击开始" name="timeButton" onClick="init()"/>
+		</div>
+		<script type="text/javascript">
+		document.write("<div id=\"box\" class=\"gameCube\" style=\"position:absolute;width:672px;height:432px;top:120px;\">");
+		for (var i=0; i<16; i++)
+		{
+			document.write("<div id=\"cube"+String(i)+'\" '+"class=\"gameCube\">");
+			document.write("<a href=\"javascript:showimage("+String(i)+") \"onClick=\"document.frame.box.focus()\">");
+			document.write("<img src=\"images/image0.jpg\" name=\"img"+String(i)+"\"  border=\"1\">");
+			document.write("</a></div>");
+			document.getElementById("cube"+String(i)).style.position="absolute";
+			document.getElementById("cube"+String(i)).style.width="168px";
+			document.getElementById("cube"+String(i)).style.height="108px";
+			document.getElementById("cube"+String(i)).style.top=String(Math.floor(i/4)*108)+"px";
+			document.getElementById("cube"+String(i)).style.left=String(i%4*168)+"px";
+		}
+
+		document.write("</div>");
+		document.getElementById("box").style.margin="auto";
+		</script>
+	</div>
+</form>
+<style type="text/css">
+
+.gameCube
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+</style>
+
+</body>
+</html>

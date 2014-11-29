@@ -1,0 +1,17 @@
+body
+{
+	background: #00f0ff;
+	text-align: center;
+}
+
+h1
+{
+	color: #0000ff;
+	display: inline-block;
+}
+
+input
+{
+	display: inline-block;
+	top:100;
+}
